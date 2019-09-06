@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMovieList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen"
+            android:layout_marginLeft="@dimen/margin_sixteen"
+            android:layout_marginTop="@dimen/margin_sixteen"
+            android:text="@string/favorite_movies_list"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_twenty_two"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMovies"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_sixteen"
+            android:layoutAnimation="@anim/layout_animation_slide_from_right"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/txtMovieList"
+            tools:listitem="@layout/item_movies"
+            tools:visibility="visible" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Empty State and Error State -->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_not_found" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLength="100"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_sixteen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imgState"
+            app:layout_constraintStart_toStartOf="@+id/imgState"
+            app:layout_constraintTop_toBottomOf="@+id/imgState"
+            tools:text="@tools:sample/lorem/random" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="imgState,txtState" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

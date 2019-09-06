@@ -1,0 +1,179 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_twenty_four"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNameTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen"
+            android:layout_marginLeft="@dimen/margin_sixteen"
+            android:layout_marginTop="@dimen/margin_sixteen"
+            android:layout_marginEnd="@dimen/margin_sixteen"
+            android:layout_marginRight="@dimen/margin_sixteen"
+            android:text="@string/info_name"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_sixteen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/info_name_value"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_twelve"
+            app:layout_constraintEnd_toEndOf="@id/txtNameTitle"
+            app:layout_constraintStart_toStartOf="@id/txtNameTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtNameTitle" />
+
+        <View
+            android:id="@+id/viewLineFirst"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_one"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@id/txtName"
+            app:layout_constraintStart_toStartOf="@id/txtName"
+            app:layout_constraintTop_toBottomOf="@id/txtName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAgeTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen"
+            android:layout_marginLeft="@dimen/margin_sixteen"
+            android:layout_marginTop="@dimen/margin_sixteen"
+            android:layout_marginEnd="@dimen/margin_sixteen"
+            android:layout_marginRight="@dimen/margin_sixteen"
+            android:text="@string/info_age"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_sixteen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLineFirst" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/info_age_value"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_twelve"
+            app:layout_constraintEnd_toEndOf="@id/txtAgeTitle"
+            app:layout_constraintStart_toStartOf="@id/txtAgeTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtAgeTitle" />
+
+        <View
+            android:id="@+id/viewLineSecond"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_one"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@id/txtAge"
+            app:layout_constraintStart_toStartOf="@id/txtAge"
+            app:layout_constraintTop_toBottomOf="@id/txtAge" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtEmailTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen"
+            android:layout_marginLeft="@dimen/margin_sixteen"
+            android:layout_marginTop="@dimen/margin_sixteen"
+            android:layout_marginEnd="@dimen/margin_sixteen"
+            android:layout_marginRight="@dimen/margin_sixteen"
+            android:text="@string/info_email"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_sixteen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLineSecond" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/info_email_value"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_twelve"
+            app:layout_constraintEnd_toEndOf="@id/txtEmailTitle"
+            app:layout_constraintStart_toStartOf="@id/txtEmailTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtEmailTitle" />
+
+        <View
+            android:id="@+id/viewLineThird"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_one"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@id/txtEmail"
+            app:layout_constraintStart_toStartOf="@id/txtEmail"
+            app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPhoneTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_sixteen"
+            android:layout_marginLeft="@dimen/margin_sixteen"
+            android:layout_marginTop="@dimen/margin_sixteen"
+            android:layout_marginEnd="@dimen/margin_sixteen"
+            android:layout_marginRight="@dimen/margin_sixteen"
+            android:text="@string/info_phone"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_sixteen"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewLineThird" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/info_phone_value"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_twelve"
+            app:layout_constraintEnd_toEndOf="@id/txtPhoneTitle"
+            app:layout_constraintStart_toStartOf="@id/txtPhoneTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtPhoneTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
